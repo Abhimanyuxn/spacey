@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpaceY</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: 'Helvetica Neue', sans-serif;
+      scroll-behavior: smooth;
+      background: black;
+      color: white;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ccc;
+    }
+
+    /* Hero */
+    .hero {
+      background-image: url('https://imgs.search.brave.com/rc6CBoxxMhl1U6hKzpCD-83NQtlQ2gW0O1wI2ouJ6rA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L2cz/dUhnNEZvM2Y1VkdT/U2l0THZZNWouanBn');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 60px;
+    }
+
+    .hero .content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background: white;
+      color: black;
+      padding: 0.8rem 2rem;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ccc;
+    }
+
+    /* Sections */
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #999;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: rgba(0,0,0,0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      nav .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+    }
+
+    @media (min-width: 769px) {
+      nav .menu-toggle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">SpaceY</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#launches">Launches</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="content">
+      <h1>EXPLORE SPACE</h1>
+      <p>The future of space exploration starts here.</p>
+      <a href="#mission" class="btn">Learn More</a>
+    </div>
+  </header>
+
+  <!-- Mission Section -->
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>To revolutionize space technology, with the ultimate goal of enabling people to live on other planets.</p>
+  </section>
+
+  <!-- Launches Section -->
+  <section id="launches">
+    <h2>Upcoming Launches</h2>
+    <p>We are preparing for the next generation of missions with Falcon 9 and Starship. Stay tuned for updates.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: contact@spacey.com<br>Phone: +1 (234) 567-890</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; SpaceY. All Rights Reserved.
+  </footer>
+
+
+</body>
+</html>
+s
